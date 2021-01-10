@@ -12,10 +12,10 @@ namespace GrpcMyExampleServer.Services
         private readonly ILogger<ProductService> _logger;
         private readonly List<ProductInfo> products = new List<ProductInfo>
         {
-            new ProductInfo{User = new UserInfo { Id =  1, ProductName = "Chees Game", ProductDate = " 08.01.2021"}, Price = "$45" },
-            new ProductInfo{ User = new UserInfo{Id = 2, ProductName = "Checker Game", ProductDate = " 05.01.2021"}, Price = "$78" },
-            new ProductInfo{ User = new UserInfo{ Id = 3, ProductName = "Test Center", ProductDate = " 10.01.2021"}, Price = "$46" },
-            new ProductInfo{User = new UserInfo{Id = 4, ProductName = "Proctoring Syste", ProductDate = " 07.01.2021"}, Price = "$100"}
+            new ProductInfo{User = new UserInfo { Id =  1, ProductName = "Chees Game", ParentCategoryId = 1}, Price = "$45" },
+            new ProductInfo{ User = new UserInfo{Id = 2, ProductName = "Checker Game", ParentCategoryId = 2}, Price = "$78" },
+            new ProductInfo{ User = new UserInfo{ Id = 3, ProductName = "Test Center", ParentCategoryId = 3}, Price = "$46" },
+            new ProductInfo{User = new UserInfo{Id = 4, ProductName = "Proctoring Syste", ParentCategoryId = 4}, Price = "$100"}
         };
 
         public ProductService(ILogger<ProductService> logger)

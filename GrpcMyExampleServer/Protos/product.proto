@@ -15,10 +15,10 @@ message ProductLookup {
 	int32 id = 1;
 }
 
-message UserInfo {
+message CategoryInfo {
 	int32 id = 1;
 	string productName = 2;
-	Date productDate = "00.00.00";
+	int32 parentCategoryId = 3;
 }
 
 message ProductInfo {
