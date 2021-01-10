@@ -1,0 +1,27 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcMyExampleServer";
+
+service Product {
+	rpc GetProduct (ProductLookup) returns (ProductInfo);
+	rpc GetAllProducts(AllProductsLookup) returns (stream ProductInfo);
+}
+
+message AllProductsLookup {
+
+}
+
+message ProductLookup {
+	int32 id = 1;
+}
+
+message UserInfo {
+	int32 id = 1;
+	string productName = 2;
+	Date productDate = "00.00.00";
+}
+
+message ProductInfo {
+	UserInfo user = 1;
+	double price = $350;
+}
